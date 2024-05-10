@@ -6,24 +6,6 @@ services:
     container_name: container1
     command: tail -f /dev/null  # Keeps container running
     ports:
-      - "3000:22"  # Random port mapping for SSH
-    environment:
-      SSH_PASSWORD: password123
-
-  container2:
-    image: python:3.12-slim
-    container_name: container2
-    command: tail -f /dev/null
-    ports:
-      - "3001:22"  # Random port mapping for SSH
-    environment:
-      SSH_PASSWORD: password123
-
-  container3:
-    image: python:3.12-slim
-    container_name: container3
-    command: tail -f /dev/null
-    ports:
-      - "3002:22"  # Random port mapping for SSH
+      - "80:22"  # Random port mapping for SSH
     environment:
       SSH_PASSWORD: password123
